@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 130px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo img {
+  height: 25px;
+}
+
+.logo p {
+  font-size: 20px;
+  font-family: "Gilroy-Medium-☞", Helvetica;
+  line-height: 32px;
+  color: #0065fe;
+}
+
+.header .frame ul {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+}
+
+.header .frame ul li {
+  list-style-type: none;
+}
+
+.header .frame ul li a {
+  text-decoration: none;
+  color: #141414;
+  font-family: "Gilroy-Medium-☞", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.header .frame ul li a:hover {
+  color: #0065fe;
+}
+
+.header .btn {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+}
+
+.header .btn .log-in a {
+  color: #0065fe;
+  font-family: "Gilroy-SemiBold-☞", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-decoration: none;
+
+}
+
+.header button {
+  color: #0065fe;
+  font: 16px;
+  background-color: #0065fe;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  height: 44px;
+  width: 142px;
+}
+
+.header button a {
+  color: #fff;
+  text-decoration: none;
+}

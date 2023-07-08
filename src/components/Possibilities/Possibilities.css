@@ -1,0 +1,97 @@
+.possibilities {
+  background-color: #f8fafd;
+  display: flex;
+}
+
+.possibilities-frame {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.one-stop-four-wrapper{
+  margin-top: 100px;
+}
+
+.one-stop-four-wrapper h1 {
+  font-family: "Gilroy-Bold-Regular", Helvetica;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 48px;
+  color: #141414;
+}
+
+.four-Possibilities span {
+  color: #005ae2;
+}
+
+.box-flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.text-wrapper {
+  color: #141414;
+  font-family: "Gilroy-SemiBold-☞", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+.text-wrapper-1 {
+  color: #141414;
+  font-family: "Gilroy-Medium-☞", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+@media only screen and (min-width: 1024px){
+.possibilities {
+  margin-top: -6px;
+  background-color: #f8fafd;
+  display: flex;
+}
+
+.possibilities-frame {
+  flex-direction: row;
+  gap: 120px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.one-stop-four-wrapper{
+  margin-top: 0;
+}
+
+.one-stop-four-wrapper h1 {
+  font-size: 40px;
+}
+
+.box-flex {
+  display: flex;
+  gap: 72px;
+  justify-content: flex-end;
+}
+
+.one-stop-four-wrapper h1 {
+  font-family: "Gilroy-Bold-Regular", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 48px;
+  color: #141414;
+}
+}

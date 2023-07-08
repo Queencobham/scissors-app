@@ -1,0 +1,119 @@
+.why-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.why-choose-scissors {
+  font-family: "Gilroy-Bold-Regular", Helvetica;
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: relative;
+  width: fit-content;
+  text-transform: capitalize;
+  color: #141414;
+}
+
+.why-choose-scissors::before{
+  content: url('../../assets/Line70.png');
+  transform: scale(.8);
+  position: absolute;
+  margin-top: -7px;
+  margin-left: -15px;
+}
+
+span {
+  color: #005ae2;
+}
+
+.flex-left-text {
+  color: #141414;
+  font-family: "Gilroy-Medium-☞", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: 20px;
+}
+
+.flex-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  margin-top: 30px;
+}
+
+.flex-right .img-circle {
+  background-color: #3284ff21;
+  border-radius: 28px;
+  width: 45px;
+  height: 45px;
+}
+
+.flex-right img {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.flex-right h3 {
+  color: #141414;
+  font-family: "Gilroy-SemiBold-☞", Helvetica;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-top: -1px;
+  position: relative;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.flex-right p {
+  color: #141414;
+  font-family: "Gilroy-Medium-☞", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 1024px){
+.why-wrapper {
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+.why-choose-scissors {
+  font-size: 40px;
+  line-height: 40px;
+  position: relative;
+}
+
+.flex-left-text {
+  height: 192px;
+  width: 355px;
+}
+
+.flex-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 90px;
+  column-gap: 30px;
+  margin-right: -20px;
+}
+
+.flex-right h3 {
+  font-size: 32px;
+}
+
+.flex-right p {
+  height: 80px;
+  position: relative;
+  width: 300px;
+}
+}
+

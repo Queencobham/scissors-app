@@ -1,0 +1,112 @@
+.cta {
+    background: var(--linear-gradient, linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0.00) 100%));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 50px 0;
+}
+
+.cta-form {
+    border-radius: 12px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 370px;
+    gap: 30px;
+}
+
+.first-input input {
+    margin-top: 20px; 
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid #3284FF;
+}
+
+input::placeholder {
+    color: #3284FF;
+    font-size: 12px;
+    font-family: 'Gilroy-Medium';
+    line-height: 18px;
+}
+
+.domainalias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.domainalias select,
+.domainalias input {
+    width: 200px;
+    padding: 12px 12px;
+    border-radius: 12px;
+    border: 1px solid #3284FF;
+}
+
+.domainalias select {
+    color: #3284FF;
+    font-size: 12px;
+    font-family: 'Gilroy-Medium';
+    line-height: 18px;
+}
+
+.cta-form button {
+    width: 200px;
+    padding: 12px 24px;
+    border-radius: 100px;
+    background: #005AE2;
+    border: none;
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'Gilroy-SemiBold';
+    line-height: 12px;
+}
+
+.cta-form button::after{
+    content: url('../../assets/magicwand.png');
+    position: absolute;
+    margin-top: -8px;
+    margin-left: 10px;
+}
+
+.cta-form p {
+    font-family: "Gilroy-Medium-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding: 0 10px;
+    color: #4991ff;
+}
+
+.cta-form span {
+    color: #3284ff;
+    font-family: "Gilroy-Bold-Regular", Helvetica;
+}
+
+@media only screen and (min-width: 1024px){
+    .cta-form {
+        width: 500px;
+        height: 350px;
+    }
+    
+    .first-input input {
+        width: 473px;
+    }
+    
+    .domainalias select,
+    .domainalias input {
+        width: 222px;
+    }
+    
+    .cta-form button {
+        width: 473px;
+    }
+}
+

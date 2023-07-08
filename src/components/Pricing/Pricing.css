@@ -1,0 +1,188 @@
+.pricing {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.a-price-perfect-for {
+    color: #141414;
+    font-family: "Gilroy-Bold-Regular", Helvetica;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 48px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.a-price-perfect-for::before {
+    content: url('../../assets/Line70.png');
+    transform: scale(.8);
+    position: absolute;
+    margin-left: -15px;
+}
+
+.a-price-perfect-for-wrapper p {
+    color: #141414;
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 0.4px solid;
+    border-color: #005ae2;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px #0000000d;
+    height: 350px;
+    width: 300px;
+    overflow: hidden;
+    padding: 20px 30px;
+}
+
+.card-head h4 {
+    color: #141414;
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 32px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.card-head h3 {
+    color: #141414;
+    font-family: "Gilroy-Bold-☞", Helvetica;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 48px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+.card-head p {
+    color: #141414;
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+.card-body p {
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+    margin-left: 19px;
+    text-transform: capitalize;
+    padding-top: 10px;
+}
+
+.card-body p::before {
+    content: url('../../assets/check-circle.png');
+    transform: scale(.8);
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 3px;
+}
+
+.card-center {
+    background: var(--linear-gradient, linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0.00) 100%));
+    border: transparent;
+    color: #fff;
+} 
+
+.card-center h3,
+.card-center h4,
+.card-center p {
+    color: #fff;
+}
+
+.card-center .card-body p::before {
+    content: url('../../assets/check-circle-white.png');
+    transform: scale(.8);
+    position: absolute;
+    margin-left: -20px;
+    margin-top: 3px;
+}
+
+.pricing button {
+    background-color: #005AE2;
+    border-radius: 100px;
+    color: #FFF;
+    font-size: 16px;
+    font-family: "Gilroy-Bold-☞", Helvetica;
+    line-height: 12px;
+    border: none;
+    padding: 15px 40px;
+    text-transform: capitalize;
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 1024px){
+.pricing {
+    margin-top: 100px;
+}
+
+.a-price-perfect-for {
+    font-size: 40px;
+   padding: 0;
+}
+
+.a-price-perfect-for-wrapper p {
+    width: 556px;
+    padding: 0;
+}
+
+.cards {
+    margin-top: 100px;
+}
+
+.card-head h4 {
+    font-size: 24px;
+}
+
+.card-head h3 {
+    font-size: 40px;
+}
+
+.card-head p {
+    font-size: 20px;
+}
+
+.card-body p {
+    font-size: 14px;
+}
+
+.pricing button {
+    margin-top: 60px;
+}
+}
+
+
+

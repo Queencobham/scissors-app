@@ -1,0 +1,108 @@
+.faq{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-title h2{
+    color: #141414;
+  font-family: "Gilroy-Bold-☞", Helvetica;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.faq-title h2::before{
+    content: url('../../assets/Line70.png');
+    transform: scale(.8);
+    position: absolute;
+    margin-left: -15px;
+    margin-top: -5px;
+}
+
+.question-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.question-flex span{
+    color: #141414;
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+
+.openclose{
+    color: #141414
+}
+
+.answer{
+    color: #141414;
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 32px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+hr{
+   margin-bottom: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+   border: 1px solid #D6D6D6;
+}
+
+@media only screen and (min-width: 1024px){
+.faq{
+    margin-top: 100px;
+}
+
+.question-flex{
+  padding: 0;
+}
+
+.question-flex span{
+    font-size: 20px;
+}
+
+.question{
+ width: 792px;
+}
+
+.answer{
+    font-size: 16px;
+    width: 792px;
+    padding: 0;
+}
+
+hr{
+   margin-left: 0;
+   margin-right: 0;
+}
+}
+
+
+
+
+
+
+
