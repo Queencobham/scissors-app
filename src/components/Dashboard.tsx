@@ -39,7 +39,7 @@ const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
     const shortCode = nanoid(6);
 
-    const generatedShortUrl = `https://trimit.netlify.app/${shortCode}`;
+    const generatedShortUrl = `${window.location.host}/${shortCode}`;
 
     const link: Link = {
       name,
