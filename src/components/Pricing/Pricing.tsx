@@ -2,7 +2,7 @@ import './Pricing.css'
 
 export default function Pricing(){
     return(
-        <div className="pricing">
+        <div className="pricing" id='pricing'>
         <div className="a-price-perfect-for-wrapper">
           <h1 className="a-price-perfect-for">
             A <span className="span-pricing">price perfect</span> for your needs.

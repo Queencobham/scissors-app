@@ -6,7 +6,7 @@ import "./Why.css";
 
 export default function Why() {
   return (
-    <div className="why container">
+    <div className="why container" id='features'>
       <div className="why-wrapper">
         <div className="flex-left">
           <h1 className="why-choose-scissors">why choose <span>scissors</span></h1>

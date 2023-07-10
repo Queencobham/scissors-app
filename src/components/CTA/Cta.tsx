@@ -2,7 +2,7 @@ import './Cta.css'
 
 export default function Cta() {
     return (
-        <div className="cta">
+        <div className="cta" id="cta">
             <div className="cta-form">
                 <div className="first-input">
                     <input type="text" placeholder="Paste URL here..." />
