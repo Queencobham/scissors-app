@@ -1,5 +1,5 @@
 .header {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-between;
   gap: 130px;
@@ -77,4 +77,10 @@
 .header button a {
   color: #fff;
   text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .header{
+   display: flex;
+  }
 }

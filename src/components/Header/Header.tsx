@@ -1,11 +1,14 @@
 import logo1 from "../../assets/Vector (3).png"
 import logo2 from "../../assets/Vector 2.png"
 import {Link} from "react-router-dom"
+import Hamburger from '../Hamburger/Hamburger'
 import "./Header.css";
 
 export default function Header() {
   return (
-    <nav className="header container">
+      <>
+      <Hamburger />
+      <nav className="header container">
       <div className="logo">
         <img src={logo1} alt="logo" />
         <img src={logo2} alt="logo" />
@@ -27,5 +30,6 @@ export default function Header() {
         <button><Link to="/signup">Try for free</Link></button>
       </div>
     </nav>
+      </>
   );
 };

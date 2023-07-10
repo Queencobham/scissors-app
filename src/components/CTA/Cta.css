@@ -90,7 +90,7 @@ input::placeholder {
     font-family: "Gilroy-Bold-Regular", Helvetica;
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 768px){
     .cta-form {
         width: 500px;
         height: 350px;

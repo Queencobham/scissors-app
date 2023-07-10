@@ -37,7 +37,7 @@
     margin-top: 25px;
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 768px){
 .optimization{
     margin-top: 100px;
     margin-bottom: 70px;

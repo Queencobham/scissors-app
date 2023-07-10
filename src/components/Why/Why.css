@@ -84,7 +84,7 @@ span {
 @media only screen and (min-width: 1024px){
 .why-wrapper {
   flex-direction: row;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .why-choose-scissors {
