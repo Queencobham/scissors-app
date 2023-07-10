@@ -2,6 +2,8 @@ import { useState, ChangeEvent, FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth, SignInUserFn } from '../../context/AuthContext';
 import { FirebaseError } from 'firebase/app';
+import logo1 from "../../assets/Vector (3).png"
+import logo2 from "../../assets/Vector 2.png"
 import Footer from '../Footer/Footer';
 import './Login.css'
 
@@ -57,36 +59,43 @@ function Login() {
 
   return (
     <>
-     <div className='login'>
-      <h3>login</h3>
-      {error && <p className="error-message">{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <span>
-          <input
-            onChange={handleEmailChange}
-            type="email"
-            placeholder="email address"
-            required
-            value={email}
-          />
-        </span>
-        <span>
-          <input
-            onChange={handlePassword}
-            type="password"
-            placeholder="password"
-            required
-            value={password}
-          />
-        </span>
-        <button type="submit">login</button>
-      </form>
-      <p>
-        Don't have an account? <Link to="/signup">Sign up</Link>
-      </p>
-      <p className='terms'>By signing in with an account, you agree to <br />scissor's <span>Terms of Service, Privacy Policy</span> and <span>Acceptable Use Policy.</span></p>
-    </div>
-    <Footer />
+      <div className="login-logo">
+        <Link to="/" className='logo'>
+          <img src={logo1} alt="logo" />
+          <img src={logo2} alt="logo" />
+          <p>SCISSOR</p>
+        </Link>
+      </div>
+      <div className='login'>
+        <h3>login</h3>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <span>
+            <input
+              onChange={handleEmailChange}
+              type="email"
+              placeholder="email address"
+              required
+              value={email}
+            />
+          </span>
+          <span>
+            <input
+              onChange={handlePassword}
+              type="password"
+              placeholder="password"
+              required
+              value={password}
+            />
+          </span>
+          <button type="submit">login</button>
+        </form>
+        <p>
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </p>
+        <p className='terms'>By signing in with an account, you agree to <br />scissor's <span>Terms of Service, Privacy Policy</span> and <span>Acceptable Use Policy.</span></p>
+      </div>
+      <Footer />
     </>
   );
 }

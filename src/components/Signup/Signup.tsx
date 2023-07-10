@@ -1,7 +1,9 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { UserAuth, CreateUserFn} from '../../context/AuthContext';
+import { UserAuth, CreateUserFn } from '../../context/AuthContext';
 import { FirebaseError } from 'firebase/app';
+import logo1 from "../../assets/Vector (3).png"
+import logo2 from "../../assets/Vector 2.png"
 import './Signup.css'
 import Footer from '../Footer/Footer';
 
@@ -18,7 +20,7 @@ function Signup() {
     e.preventDefault();
     setError('');
 
-    if (password !== confirmPassword){
+    if (password !== confirmPassword) {
       setError('password do not match, try again');
       return;
     }
@@ -66,46 +68,53 @@ function Signup() {
 
   return (
     <>
-    <div className='signup'>
-      <h3>create account</h3>
-      {error && <p className="error-message">{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <span>
-          <input
-            onChange={handleEmailChange}
-            type="email"
-            placeholder="email"
-            required
-            value={email}
-          />
-        </span>
-        <span>
-          <input
-            onChange={handlePassword}
-            type="password"
-            placeholder="password"
-            required
-            value={password}
-          />
-        </span>
-        <span>
-          <input
-            onChange={handleConfirmPassword}
-            type="password"
-            placeholder="Retype password"
-            required
-            value={confirmPassword}
-          />
-        </span>
-        <p className='password'>6 or more characters, one number, one uppercase & one lower case.</p>
-        <button type="submit">sign up with Email</button>
-      </form>
-      <p>
-        Already have an account? <Link to="/login">Log in</Link>
-      </p>
-      <p className='terms'>By signing in with an account, you agree to <br />scissor's <span>Terms of Service, Privacy Policy</span> and <span>Acceptable Use Policy.</span></p>
-    </div>
-    <Footer />
+      <div className="login-logo">
+        <Link to="/" className='logo'>
+          <img src={logo1} alt="logo" />
+          <img src={logo2} alt="logo" />
+          <p>SCISSOR</p>
+        </Link>
+      </div>
+      <div className='signup'>
+        <h3>create account</h3>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <span>
+            <input
+              onChange={handleEmailChange}
+              type="email"
+              placeholder="email"
+              required
+              value={email}
+            />
+          </span>
+          <span>
+            <input
+              onChange={handlePassword}
+              type="password"
+              placeholder="password"
+              required
+              value={password}
+            />
+          </span>
+          <span>
+            <input
+              onChange={handleConfirmPassword}
+              type="password"
+              placeholder="Retype password"
+              required
+              value={confirmPassword}
+            />
+          </span>
+          <p className='password'>6 or more characters, one number, one uppercase & one lower case.</p>
+          <button type="submit">sign up with Email</button>
+        </form>
+        <p>
+          Already have an account? <Link to="/login">Log in</Link>
+        </p>
+        <p className='terms'>By signing in with an account, you agree to <br />scissor's <span>Terms of Service, Privacy Policy</span> and <span>Acceptable Use Policy.</span></p>
+      </div>
+      <Footer />
     </>
   );
 }

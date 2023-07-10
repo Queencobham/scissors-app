@@ -58,12 +58,16 @@
 
 .hero-btn button {
   background-color: #005ae2;
-  color: #fff;
   text-transform: capitalize;
   border: none;
   padding: 10px 40px;
   border-radius: 30px;
   font-size: 16px;
+}
+
+.hero-btn button a{
+  color: #fff;
+  text-decoration: none;
 }
 
 .hero-btn p {

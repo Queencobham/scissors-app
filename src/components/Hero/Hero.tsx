@@ -2,6 +2,7 @@ import link from '../../assets/link-2.png'
 import arrow from '../../assets/Line 7.png'
 // import rectangle from '../../assets/Rectangle.png'
 // import ellipse from '../../assets/Ellipse 1.png'
+import { Link } from 'react-router-dom';
 import "./Hero.css";
 
 export default function Hero() {
@@ -19,7 +20,7 @@ export default function Hero() {
           domain customization options to reinforce your brand presence and enhance user engagement.
         </p>
         <div className="hero-btn">
-          <button>sign up</button>
+          <button><Link to="/signup">Sign up</Link></button>
           <p>learn more</p>
         </div>
         <div className="box-before">
