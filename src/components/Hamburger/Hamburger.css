@@ -60,15 +60,15 @@
     text-decoration: none;
 }
 
-.btn {
+.hamburger-btn {
     align-items: center;
     display: flex;
     gap: 16px;
     justify-content: center;
-    /* margin-top: 30px; */
+    margin-top: 30px;
   }
   
-   .btn .log-in a {
+   .hamburger-btn .log-in a {
     color: #fff;
     font-family: "Gilroy-SemiBold-☞", Helvetica;
     font-size: 16px;
@@ -79,7 +79,7 @@
   
   }
   
-  .btn button {
+  .hamburger-btn button {
     color: #0065fe;
     font: 16px;
     background-color: #fff;
@@ -89,7 +89,7 @@
     width: 142px;
   }
   
-  .btn button a {
+  .hamburger-btn button a {
     color: #0065fe;
     text-decoration: none;
   }

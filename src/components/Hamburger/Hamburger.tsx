@@ -32,7 +32,7 @@ function HamburgerMenu() {
           <li><a href="#">Analytics</a></li>
           <li><a href="#">FAQs</a></li>
 
-          <div className="btn">
+          <div className="hamburger-btn">
             <div className="log-in"><Link to="/login">Log in</Link></div>
             <button><Link to="/signup">Try for free</Link></button>
           </div>
