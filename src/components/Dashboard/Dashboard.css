@@ -1,0 +1,84 @@
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    /* padding: 50px 20px; */
+    gap: 40px;
+}
+
+.user{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #141414;
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 32px;
+    padding: 0 20px;
+}
+
+.user button{
+    border-radius: 100px;
+    background: #005AE2;
+    width: 100px;
+    padding: 10px 0;
+    border: transparent;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Gilroy-SemiBold', Helvetica;
+    line-height: 12px;
+    margin-top: 15px;
+}
+
+.trim-container{
+    background-color: #f4f6fa;
+}
+
+.trim{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   
+    justify-content: center;
+    align-items: center;
+}
+
+.trim input{
+width: 80vw;
+padding: 13px 15px;
+border: 2px solid #005AE2;
+border-radius: 12px;
+outline: transparent;
+}
+
+.trim input::placeholder {
+text-transform: capitalize;
+font-size: 12px;
+font-family: 'Gilroy-Medium', Helvetica;
+line-height: 24px;
+color: #A0B1C0;
+}
+
+.trim button{
+border-radius: 100px;
+    background: #005AE2;
+    width: 80vw;
+    padding: 10px 0;
+    border: transparent;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Gilroy-SemiBold', Helvetica;
+    line-height: 12px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-card{
+    background-color: #fff;
+    margin-top: 20px;
+    width: 80vw;
+}

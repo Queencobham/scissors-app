@@ -2,6 +2,7 @@ import { CgMenuLeftAlt } from "react-icons/cg"
 import logo1 from "../../assets/Vector (3).png"
 import logo2 from "../../assets/Vector 2.png"
 import { Link } from "react-router-dom"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 import './Hamburger.css'
 
 function HamburgerMenu() {
@@ -26,11 +27,11 @@ function HamburgerMenu() {
       </div>
       <div className="menu">
         <ul className="menu-items">
-          <li><a href="#">My URLs</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">FAQs</a></li>
+          <li><Link to="/login">My URLs</Link></li>
+          <li><AnchorLink href="#features">Features</AnchorLink></li>
+          <li><AnchorLink href="#pricing">Pricing</AnchorLink></li>
+          <li><Link to="/login">Analytics</Link></li>
+          <li><AnchorLink href="#faq">FAQs</AnchorLink></li>
 
           <div className="hamburger-btn">
             <div className="log-in"><Link to="/login">Log in</Link></div>

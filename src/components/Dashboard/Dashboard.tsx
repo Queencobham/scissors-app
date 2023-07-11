@@ -6,6 +6,8 @@ import { auth } from "../../firebase";
 import { nanoid } from "nanoid";
 import QRCodeGenerator from "../Qrcode";
 import validUrl from 'valid-url'
+import {BsPersonCircle} from 'react-icons/bs'
+import './Dashboard.css'
 
 
 interface Link {
@@ -126,7 +128,8 @@ const AddDataToFirestore = (): JSX.Element => {
   }, []);
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <div className="trim-container">
+    <form onSubmit={handleFormSubmit} className="trim">
       <input
         type="text"
         placeholder="Name"
@@ -143,11 +146,12 @@ const AddDataToFirestore = (): JSX.Element => {
       />
       <button type="submit">Trim URL</button>
       {error && <p className="error-message">{error}</p>}
+    </form>
+    <div className="content">
       {links.map((link) => (
-        <div key={link.id}>
-          <p>{link.name}</p>
-          <p>{link.longURL}</p>
-          <p>{link.shortUrl}</p>
+        <div key={link.id} className="content-card">
+          <p>Long Url :{link.longURL}</p>
+          <p>Shortened Url: {link.shortUrl}</p>
           <p>TotalClicks: {link.totalClicks}</p>
           <button
             type="button"
@@ -163,7 +167,8 @@ const AddDataToFirestore = (): JSX.Element => {
           )}
         </div>
       ))}
-    </form>
+    </div>
+    </div>
   );
 };
 
@@ -188,11 +193,13 @@ const Dashboard = () => {
   const trimmedEmail = email ? email.substring(0, email.indexOf('@')) : '';
 
   return (
-    <>
-      {user && <h2>Welcome, {trimmedEmail}</h2>}
+    <div className="dashboard">
+      <div className="user">
+      {user && <div><span><BsPersonCircle /></span><h2>Welcome, {trimmedEmail}</h2></div>}
+      <button onClick={handleLogout}>Log out</button>
+      </div>
       <AddDataToFirestore />
-      <button onClick={handleLogout}>Logout</button>
-    </>
+    </div>
   );
 };
 
