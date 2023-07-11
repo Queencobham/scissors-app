@@ -16,8 +16,14 @@
     justify-content: center;
     align-items: center;
     width: 70%;
-    height: 370px;
+    height: 350px;
     gap: 30px;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .first-input input {
@@ -25,6 +31,7 @@
     padding: 12px 12px;
     border-radius: 12px;
     border: 1px solid #3284FF;
+    outline: none;
 }
 
 input::placeholder {
@@ -34,29 +41,22 @@ input::placeholder {
     line-height: 18px;
 }
 
-.domainalias {
+/* .domainalias {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
-}
+} */
 
-.domainalias select,
-.domainalias input {
+/* .domainalias input {
     width: 200px;
     padding: 12px 12px;
     border-radius: 12px;
     border: 1px solid #3284FF;
-}
+    outline: none;
+} */
 
-.domainalias select {
-    color: #3284FF;
-    font-size: 12px;
-    font-family: 'Gilroy-Medium';
-    line-height: 18px;
-}
-
-.cta-form button {
+.cta-form form button {
     width: 200px;
     padding: 12px 24px;
     border-radius: 100px;
@@ -68,7 +68,7 @@ input::placeholder {
     line-height: 12px;
 }
 
-.cta-form button::after{
+.cta-form form button::after{
     content: url('../../assets/magicwand.png');
     position: absolute;
     margin-top: -8px;
@@ -90,6 +90,33 @@ input::placeholder {
     font-family: "Gilroy-Bold-Regular", Helvetica;
 }
 
+.shortened{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.shortened p{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.shortened span{
+    color: black;
+    text-decoration: underline;
+}
+
+.shortened button{
+    background-color: #005AE2;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+
 @media only screen and (min-width: 768px){
     .cta-form {
         width: 500px;
@@ -100,12 +127,11 @@ input::placeholder {
         width: 473px;
     }
     
-    .domainalias select,
     .domainalias input {
         width: 222px;
     }
     
-    .cta-form button {
+    .cta-form form button {
         width: 473px;
     }
 }
