@@ -1,11 +1,15 @@
-.dashboard{
+/* .dashboard {
+    background-color: #f0ece5;
+    height: 120vh;
+} */
+
+.board{
     display: flex;
     flex-direction: column;
-    /* padding: 50px 20px; */
-    gap: 40px;
+    gap: 50px;
 }
 
-.user{
+.user {
     text-align: center;
     text-transform: capitalize;
     font-size: 20px;
@@ -15,9 +19,10 @@
     letter-spacing: 0;
     line-height: 32px;
     padding: 0 20px;
+    margin-top: 30px;
 }
 
-.user button{
+.user button {
     border-radius: 100px;
     background: #005AE2;
     width: 100px;
@@ -30,36 +35,37 @@
     margin-top: 15px;
 }
 
-.trim-container{
-    background-color: #f4f6fa;
-}
-
-.trim{
+.trim {
     display: flex;
     flex-direction: column;
-    gap: 20px;   
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
-.trim input{
-width: 80vw;
-padding: 13px 15px;
-border: 2px solid #005AE2;
-border-radius: 12px;
-outline: transparent;
+.trim-container form{
+    background-color: #fff;
+    padding: 30px;
+}
+
+.trim input {
+    width: 80vw;
+    padding: 13px 15px;
+    border: 2px solid #005AE2;
+    border-radius: 12px;
+    outline: transparent;
 }
 
 .trim input::placeholder {
-text-transform: capitalize;
-font-size: 12px;
-font-family: 'Gilroy-Medium', Helvetica;
-line-height: 24px;
-color: #A0B1C0;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-family: 'Gilroy-Medium', Helvetica;
+    line-height: 24px;
+    color: #A0B1C0;
 }
 
-.trim button{
-border-radius: 100px;
+.trim button {
+    border-radius: 100px;
     background: #005AE2;
     width: 80vw;
     padding: 10px 0;
@@ -70,15 +76,141 @@ border-radius: 100px;
     line-height: 12px;
 }
 
-.content{
+.content {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.content-card{
-    background-color: #fff;
+.content h2{
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-family: "Gilroy-Medium-☞", Helvetica;
+    letter-spacing: 3px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content-card {
+    border: 3px solid #005AE2;
     margin-top: 20px;
-    width: 80vw;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content-card p{
+    font-family: "Gilroy-Medium-☞", Helvetica;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.content-card .longurl{
+    color: #141414;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.content-card .shorturl{
+    display: flex;
+}
+
+.content-card .shorturl svg{
+    color: #141414;
+}
+
+.content-card .shorturl p{
+    color: #005AE2;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.content-card .totalclicks{
+  color: #141414;
+}
+
+.content-card .totalclicks span{
+    color: #141414;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.content-card button{
+    border-radius: 100px;
+    background: #4a80d3;
+    width: 150px;
+    padding: 10px 0;
+    border: transparent;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: 'Gilroy-SemiBold', Helvetica;
+    line-height: 12px;
+}
+
+.qrcode{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.qrcode button{
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 1024px) {    
+    .trim-container form{
+        flex-direction: row;
+        padding: 30px;
+    }
+    
+    .trim input {
+        width: 400px;
+    }
+    
+    .trim input::placeholder {
+        text-transform: capitalize;
+        font-size: 12px;
+        font-family: 'Gilroy-Medium', Helvetica;
+        line-height: 24px;
+        color: #A0B1C0;
+    }
+    
+    .trim button {
+        border-radius: 100px;
+        background: #005AE2;
+        width: 80vw;
+        padding: 10px 0;
+        border: transparent;
+        color: #fff;
+        font-size: 14px;
+        font-family: 'Gilroy-SemiBold', Helvetica;
+        line-height: 12px;
+    }
+
+    .trim input::placeholder {
+        font-size: 14px;
+    }
+    
+    .trim button {
+        width: 200px;
+    }
+    
+.content-card {
+    width: 50%;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
 }

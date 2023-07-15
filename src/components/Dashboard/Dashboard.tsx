@@ -6,7 +6,7 @@ import { auth } from "../../firebase";
 import { nanoid } from "nanoid";
 import QRCodeGenerator from "../Qrcode";
 import validUrl from 'valid-url'
-import {BsPersonCircle} from 'react-icons/bs'
+import { BsPersonCircle } from 'react-icons/bs'
 import './Dashboard.css'
 
 
@@ -129,45 +129,49 @@ const AddDataToFirestore = (): JSX.Element => {
 
   return (
     <div className="trim-container">
-    <form onSubmit={handleFormSubmit} className="trim">
-      <input
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Long URL"
-        value={longURL}
-        onChange={(e) => setLongURL(e.target.value)}
-        required
-      />
-      <button type="submit">Trim URL</button>
-      {error && <p className="error-message">{error}</p>}
-    </form>
-    <div className="content">
-      {links.map((link) => (
-        <div key={link.id} className="content-card">
-          <p>Long Url :{link.longURL}</p>
-          <p>Shortened Url: {link.shortUrl}</p>
-          <p>TotalClicks: {link.totalClicks}</p>
-          <button
-            type="button"
-            onClick={() => {
-              setShortUrl(link.shortUrl);
-              setShowQRCode(!showQRCode);
-            }}
-          >
-            Generate QR Code
-          </button>
-          {shortUrl === link.shortUrl && showQRCode && (
-            <QRCodeGenerator shortUrl={shortUrl} />
-          )}
-        </div>
-      ))}
-    </div>
+      <form onSubmit={handleFormSubmit} className="trim">
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Long URL"
+          value={longURL}
+          onChange={(e) => setLongURL(e.target.value)}
+          required
+        />
+        <button type="submit">Trim URL</button>
+        {error && <p className="error-message">{error}</p>}
+      </form>
+      <div className="content">
+        <h2>Generated URLs</h2>
+        {links.map((link) => (
+          <div key={link.id} className="content-card">
+            <p className="longurl">{link.longURL}</p>
+            <span className="shorturl">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" role="graphics-document" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><title>redirect</title><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"></path></svg>
+              <p>{link.shortUrl}</p>
+            </span>
+            <p className="totalclicks"><span>Total Clicks:</span> {link.totalClicks}</p>
+            <button
+              type="button"
+              onClick={() => {
+                setShortUrl(link.shortUrl);
+                setShowQRCode(!showQRCode);
+              }}
+            >
+              Generate QR Code
+            </button>
+            {shortUrl === link.shortUrl && showQRCode && (
+              <QRCodeGenerator shortUrl={shortUrl} />
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -194,11 +198,13 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <div className="user">
-      {user && <div><span><BsPersonCircle /></span><h2>Welcome, {trimmedEmail}</h2></div>}
-      <button onClick={handleLogout}>Log out</button>
+      <div className="board container">
+        <div className="user">
+          {user && <div><span><BsPersonCircle /></span><h2>Welcome, {trimmedEmail}</h2></div>}
+          <button onClick={handleLogout}>Log out</button>
+        </div>
+        <AddDataToFirestore />
       </div>
-      <AddDataToFirestore />
     </div>
   );
 };

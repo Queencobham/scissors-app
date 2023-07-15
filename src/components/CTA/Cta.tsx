@@ -95,54 +95,6 @@ const Cta = (): JSX.Element => {
           <p>By clicking TrimURL, I agree to the <span>Terms of Service, Privacy Policy</span> and Use of Cookies.</p>
       </div>
     </div>
-
-
-    // <div className="cta" id="cta">
-    //     <div className="cta-form">
-    //         <form onSubmit={handleFormSubmit} className="input-form">
-    //             <div className="first-input">
-    //                 <input
-    //                     type="text"
-    //                     placeholder="Long URL"
-    //                     value={longURL}
-    //                     onChange={(e) => setLongURL(e.target.value)}
-    //                     required
-    //                 />
-    //             </div>
-    //             {/* <div className="domainalias">
-    //                 <input type="text" placeholder="Enter domain name" />
-    //                 <input type="text" placeholder="Type alias here" />
-    //             </div> */}
-    //             <button type="submit">Trim URL</button>
-    //         </form>
-    //         {error && <p className="error-message">{error}</p>}
-    //         {shortUrl && (
-    //             <div className="shortenedurl">
-    //                 <p>Shortened URL: {shortUrl}</p>
-    //             </div>
-    //         )}
-    //         <p>By clicking TrimURL, I agree to the <span>Terms of Service, Privacy Policy</span> and Use of Cookies.</p>
-    //     </div>
-    // </div>
-    // // <div>
-    // //   <form onSubmit={handleFormSubmit}>
-    // //     <input
-    // //       type="text"
-    // //       placeholder="Long URL"
-    // //       value={longURL}
-    // //       onChange={(e) => setLongURL(e.target.value)}
-    // //       required
-    // //     />
-    // //     <button type="submit">Generate Short URL</button>
-    // //   </form>
-
-    // //   {error && <p className="error-message">{error}</p>}
-    // //   {shortUrl && (
-    // //     <div>
-    // //       <p>Short URL: {shortUrl}</p>
-    // //     </div>
-    // //   )}
-    // // </div>
   );
 };
 
