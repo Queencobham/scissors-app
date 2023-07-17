@@ -78,6 +78,10 @@
   text-transform: capitalize;
 }
 
+.hero-btn p:hover{
+  font-weight: 600;
+}
+
 .box-links {
   -webkit-backdrop-filter: blur(212px) brightness(100%);
   align-items: flex-start;

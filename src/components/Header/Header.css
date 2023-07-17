@@ -60,7 +60,10 @@
   letter-spacing: 0;
   line-height: normal;
   text-decoration: none;
+}
 
+.header .btn .log-in a:hover{
+  font-weight: 600;
 }
 
 .header button {
@@ -78,6 +81,7 @@
   color: #fff;
   text-decoration: none;
 }
+
 
 @media screen and (min-width: 1024px) {
   .header{

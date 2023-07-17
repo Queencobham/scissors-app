@@ -1,8 +1,3 @@
-/* .dashboard {
-    background-color: #f0ece5;
-    height: 120vh;
-} */
-
 .board{
     display: flex;
     flex-direction: column;
@@ -95,6 +90,7 @@
 
 .content-card {
     border: 3px solid #005AE2;
+    border-radius: 12px;
     margin-top: 20px;
     width: 100%;
     padding: 10px;
@@ -127,10 +123,14 @@
     color: #141414;
 }
 
-.content-card .shorturl p{
+.content-card .shorturl a{
     color: #005AE2;
     font-size: 22px;
     font-weight: 700;
+}
+
+.content-card .shorturl a:hover{
+    opacity: 0.8;
 }
 
 .content-card .totalclicks{
@@ -212,5 +212,4 @@
     justify-content: center;
     align-items: center;
 }
-
 }

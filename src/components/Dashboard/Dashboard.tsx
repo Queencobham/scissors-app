@@ -7,6 +7,7 @@ import { nanoid } from "nanoid";
 import QRCodeGenerator from "../Qrcode";
 import validUrl from 'valid-url'
 import { BsPersonCircle } from 'react-icons/bs'
+// import {FaRegCopy, FaCheck} from 'react-icons/fa'
 import './Dashboard.css'
 
 
@@ -154,7 +155,9 @@ const AddDataToFirestore = (): JSX.Element => {
             <p className="longurl">{link.longURL}</p>
             <span className="shorturl">
               <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" role="graphics-document" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><title>redirect</title><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19 15l-6 6-1.42-1.42L15.17 16H4V4h2v10h9.17l-3.59-3.58L13 9l6 6z"></path></svg>
-              <p>{link.shortUrl}</p>
+              <a href={`http://${link.shortUrl}`} target="_blank" rel="noopener noreferrer">
+                {link.shortUrl}
+              </a>
             </span>
             <p className="totalclicks"><span>Total Clicks:</span> {link.totalClicks}</p>
             <button
@@ -165,7 +168,7 @@ const AddDataToFirestore = (): JSX.Element => {
               }}
             >
               Generate QR Code
-            </button>
+            </button>\
             {shortUrl === link.shortUrl && showQRCode && (
               <QRCodeGenerator shortUrl={shortUrl} />
             )}
